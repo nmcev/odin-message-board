@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title> <%= title%></title>
+</head>
+
+<body>
+
+    <h2><%= title %>'s form</h2>
+
+    <form action="/new" method="POST">
+        <div class ="field">
+            <label for="name">name</label>
+            <input name="user" type="text" id="name" placeholder="unknown">
+        </div>
+
+        <div class ="field">
+            <label for="message">message</label>
+            <input name="message" type="text" id="message" required>
+        </div>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

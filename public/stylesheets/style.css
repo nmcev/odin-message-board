@@ -1,0 +1,40 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #e8e5e5;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field input {
+  max-width: 230px;
+}
+
+button {
+  max-width: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: #262626
+}

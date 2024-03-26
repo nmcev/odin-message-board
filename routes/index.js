@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const indexControllers = require('../controller/indexController')
 
 const messages = [
   {
@@ -21,19 +22,16 @@ const messages = [
 ];
 let title = "Mini message board"
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: title, messages: messages })
+router.get('/', (req, res) => {
+  indexControllers.index(req, res, title, messages)
 });
 
-router.get('/new', function (req, res) {
-  res.render('form', {title: title })
+router.get('/new', (req, res) => {
+  indexControllers.getNewMsg(req, res, title)
 })
 
 
-router.post('/new', function (req, res, next) {
-
-  messages.push({ text: req.body.message, user: req.body.user || "unknown", added: new Date() })
-  res.redirect('/')
-  
+router.post('/new', (req, res) => {
+  indexControllers.postNewMsg(req, res, messages)
 })
 module.exports = router;
